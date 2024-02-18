@@ -174,6 +174,13 @@ int main(int, char *argv[]) {
     rcptr<Factor>ptrZ = ptrXZ->marginalize({Z}) ;
     std::cout <<__FILE__<<" : "<<__LINE__<<" : "<<*ptrZ<<std::endl;
     
+    std::cout << " " << std::endl;
+    std::cout << "**************QUESTION 5F***************" << std::endl;
+    std::cout << " " << std::endl;
+    
+    rcptr<Factor>ptrZgXE1 = ptrXZ->observeAndReduce({X},{1})->normalize() ;
+    std::cout <<__FILE__<<" : "<<__LINE__<<" : "<<*ptrZgXE1<<std::endl; 
+    
     return 0; // tell the world that all is fine
   } // try
 

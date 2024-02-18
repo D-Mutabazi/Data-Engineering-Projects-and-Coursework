@@ -181,6 +181,13 @@ int main(int, char *argv[]) {
     rcptr<Factor>ptrZgXE1 = ptrXZ->observeAndReduce({X},{1})->normalize() ;
     std::cout <<__FILE__<<" : "<<__LINE__<<" : "<<*ptrZgXE1<<std::endl; 
     
+    std::cout << " " << std::endl;
+    std::cout << "**************QUESTION 5G***************" << std::endl;
+    std::cout << " " << std::endl;
+    
+    rcptr<Factor>ptrXgZE2 = ptrXZ->observeAndReduce({Z},{2}) ;
+    std::cout<<__FILE__<<" : "<<__LINE__<<" : "<<*ptrXgZE2<<std::endl ;
+    
     return 0; // tell the world that all is fine
   } // try
 

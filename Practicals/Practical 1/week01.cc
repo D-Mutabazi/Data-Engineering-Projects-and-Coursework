@@ -164,8 +164,15 @@ int main(int, char *argv[]) {
     std::cout << "**************QUESTION 5D***************" << std::endl;
     std::cout << " " << std::endl;
     
-    rcptr<Factor>ptrXY = ptrXYZ->marginalize({X,Z}) ;
-    std::cout <<__FILE__<<" : "<<__LINE__<<" : "<<*ptrXY<<std::endl ;
+    rcptr<Factor>ptrXZ = ptrXYZ->marginalize({X,Z}) ;
+    std::cout <<__FILE__<<" : "<<__LINE__<<" : "<<*ptrXZ<<std::endl ;
+    
+    std::cout << " " << std::endl;
+    std::cout << "**************QUESTION 5E***************" << std::endl;
+    std::cout << " " << std::endl;
+    
+    rcptr<Factor>ptrZ = ptrXZ->marginalize({Z}) ;
+    std::cout <<__FILE__<<" : "<<__LINE__<<" : "<<*ptrZ<<std::endl;
     
     return 0; // tell the world that all is fine
   } // try

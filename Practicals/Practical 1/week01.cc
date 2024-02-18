@@ -152,6 +152,12 @@ int main(int, char *argv[]) {
     std::cout<<__FILE__<<" : "<<__LINE__<<" : "<<*ptrZgXY<<std::endl ;
     
     
+    std::cout << " " << std::endl;
+    std::cout << "**************QUESTION 5C***************" << std::endl;
+    std::cout << " " << std::endl;
+    
+    std::cout<<__FILE__<<" : "<<__LINE__<<" : "<<*ptrX->absorb(ptrY)->absorb(ptrZgXY)<<std::endl ;
+    
     return 0; // tell the world that all is fine
   } // try
 

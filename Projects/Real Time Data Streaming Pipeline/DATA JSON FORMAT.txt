@@ -1,0 +1,55 @@
+{
+   "gender": "male",        
+   "name": {
+      "title": "Mr",        
+      "first": "Chesney",   
+      "last": "Van der Stap"
+   },
+   "location": {
+      "street": {
+         "number": 6062,
+         "name": "Espenhof"
+      },
+      "city": "Nederweert",
+      "state": "Friesland",
+      "country": "Netherlands",
+      "postcode": "6674 GY",
+      "coordinates": {
+         "latitude": "33.0561",
+         "longitude": "-165.8463"
+      },
+      "timezone": {
+         "offset": "-3:00",
+         "description": "Brazil, Buenos Aires, Georgetown"
+      }
+   },
+   "email": "chesney.vanderstap@example.com",
+   "login": {
+      "uuid": "2c598828-76ba-496b-b191-44d1d386a9c7",
+      "username": "orangebutterfly352",
+      "password": "alaska",
+      "salt": "BASPKzTn",
+      "md5": "cca1e7477dc567b6bed3a4944f7ad455",
+      "sha1": "a330c58de1a982b65a616737853c0e8233d6368f",
+      "sha256": "111419dca8482c6dedacad4c8648ffb3cd89a35732739f97438ae0dab0b8da7b"
+   },
+   "dob": {
+      "date": "1961-08-15T13:26:55.290Z",
+      "age": 62
+   },
+   "registered": {
+      "date": "2018-09-29T22:19:15.433Z",
+      "age": 5
+   },
+   "phone": "(0376) 439073",
+   "cell": "(06) 66306105",
+      "name": "BSN",
+      "value": "21223562"
+   },
+   "picture": {
+      "large": "https://randomuser.me/api/portraits/men/8.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/8.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/8.jpg"
+   },
+   "nat": "NL"
+}

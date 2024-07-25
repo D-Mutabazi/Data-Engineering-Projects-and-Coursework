@@ -18,7 +18,7 @@ if response.status_code == 200:
     # extract  data
     data = json_data.get('Search', [])
 
-formattted_data = json.dumps(data, indent=4)
+formatted_data = json.dumps(data, indent=4)
 # process the data store in db
 
-print(formattted_data)
+print(formatted_data)

@@ -1,0 +1,49 @@
+class TreeNode:
+    def __init__(self, coordinates, index, quality):
+        self.coordinates = coordinates
+        self.index = index
+        self.quality = quality
+        self.children = []
+
+def dfs(node, current_layer, max_layers, path, best_path, best_quality, visited):
+    if node is None:
+        return
+    
+    # Visit the node
+    path.append(node)
+    visited.add(node.coordinates)
+    current_quality = sum(n.quality for n in path)
+    
+    # If reached the last layer, compare quality and update the best path
+    if current_layer == max_layers:
+        if current_quality > best_quality[0]:
+            best_quality[0] = current_quality
+            best_path[:] = path[:]
+    else:
+        # Visit up to 3 children in the next layer
+        next_layer_nodes = sorted(node.children, key=lambda x: -x.index)[:3]
+        for child in next_layer_nodes:
+            if child.coordinates not in visited:
+                dfs(child, current_layer + 1, max_layers, path, best_path, best_quality, visited)
+    
+    # Backtrack
+    path.pop()
+    visited.remove(node.coordinates)
+
+def traverse_tree(root, max_layers):
+    best_path = []
+    best_quality = [float('-inf')]
+    dfs(root, 0, max_layers, [], best_path, best_quality, set())
+    return best_path, best_quality[0]
+
+# Example tree construction (you'll need to create the tree based on your input)
+root = TreeNode((0, 3), 0, 5)
+# Add children to root and construct the entire tree here...
+
+max_layers = 4  # Example maximum layers based on the given tree
+best_path, best_quality = traverse_tree(root, max_layers)
+
+# Print the best path and its quality
+print("Best Path:", [(node.coordinates, node.index, node.quality) for node in best_path])
+print("Best Quality:", best_quality)
+

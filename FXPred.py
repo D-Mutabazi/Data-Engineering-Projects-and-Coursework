@@ -6,7 +6,7 @@ import math                         # evaluate model performances
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 
-df = pd.read_csv('./Data/EURUSD_D1.csv')
+df = pd.read_csv('./Data/EURUSD_H1.csv')
 df['Time'] = pd.to_datetime(df['Time'],format='%Y-%m-%d %H:%M:%S')
 
 X = df[['Open','High','Low']]  #features

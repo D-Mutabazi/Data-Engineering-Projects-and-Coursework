@@ -6,21 +6,23 @@ import math                         # evaluate model performances
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 
-df = pd.read_csv('./Data/EUR_USD Historical Data_daily.csv')
-df['Date'] = pd.to_datetime(df['Date'])
+df = pd.read_csv('./Data/EURUSD_D1.csv')
+df['Time'] = pd.to_datetime(df['Time'],format='%Y-%m-%d %H:%M:%S')
 
 X = df[['Open','High','Low']]  #features
-Y = df['Price']                #target
+Y = df['Close']                #target
 
-#split into training and test
-x_train = X[:962]
-y_train = Y[:962]
-train_date = df['Date'][:962]
+#split into training and test (80/20 split)
+shape_80 = int(X.shape[0]*0.8)-1
+
+x_train = X[:shape_80]
+y_train = Y[:shape_80]
+train_date = df['Time'][:shape_80]
 print(train_date.head())
 
-x_test = X[962:]
-y_test = Y[962:]
-test_dates = df['Date'][962:]
+x_test = X[shape_80:]
+y_test = Y[shape_80:]
+test_dates = df['Time'][shape_80:]
 test_dates = pd.to_datetime(test_dates)
 test_dates = pd.DataFrame(test_dates)
 
@@ -37,15 +39,13 @@ pred.reset_index(drop=True, inplace=True)
 test_dates.reset_index(drop=True, inplace=True)
 
 combined = pd.concat([test_dates, pred], axis =1 )
-print(combined.info())
 
 #plot test data
 y_test.reset_index(drop=True, inplace=True)
 testData_combined = pd.concat([test_dates, y_test], axis=1)
-print(testData_combined.head())
 
-plt.plot(testData_combined['Date'],testData_combined['Price'], color='b', label='True Price')
-plt.plot(combined['Date'],combined['Predicted Price'], color='r', label='Predicted')
+plt.plot(testData_combined['Time'],testData_combined['Close'], color='b', label='True Price')
+plt.plot(combined['Time'],combined['Predicted Price'], color='r', label='Predicted')
 
 plt.xlabel('Dates')
 plt.ylabel('Price')

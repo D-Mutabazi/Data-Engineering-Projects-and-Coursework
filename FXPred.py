@@ -6,19 +6,8 @@ import math                         # evaluate model performances
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 
-df = pd.read_csv('EUR_USD Historical Data_daily.csv')
+df = pd.read_csv('./Data/EUR_USD Historical Data_daily.csv')
 df['Date'] = pd.to_datetime(df['Date'])
-
-#draw candle stick data
-def candleChart(df):
-    fig = go.Figure(data=[go.Candlestick(x=df['Date'],
-                open=df['Open'],
-                high=df['High'],
-                low=df['Low'],
-                close=df['Price'])])
-
-    fig.update_layout(xaxis_rangeslider_visible=False)
-    fig.show()
 
 X = df[['Open','High','Low']]  #features
 Y = df['Price']                #target

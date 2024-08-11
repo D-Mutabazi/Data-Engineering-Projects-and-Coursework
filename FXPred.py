@@ -6,15 +6,16 @@ import math                         # evaluate model performances
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 
-df = pd.read_csv('./Data/EURUSD_H1.csv')
+df = pd.read_csv('./Data/EURUSD_D1.csv')
 df['Time'] = pd.to_datetime(df['Time'],format='%Y-%m-%d %H:%M:%S')
 
-X = df[['Open','High','Low']]  #features
+X = df[['Open','High','Low','Volume']]  #features
 Y = df['Close']                #target
 
 #split into training and test (80/20 split)
 shape_80 = int(X.shape[0]*0.8)-1
 
+print(X.head())
 x_train = X[:shape_80]
 y_train = Y[:shape_80]
 train_date = df['Time'][:shape_80]

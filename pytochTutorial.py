@@ -86,5 +86,48 @@ print(f"\nNew tensor: {x_squeezed}")
 print(f"New shape: {x_squeezed.shape}")
 
 
+print(f"Previous tensor: {x_squeezed}")
+print(f"Previous shape: {x_squeezed.shape}")
+
+x_unsqueezed  = x_squeezed.unsqueeze(dim=0)
+print(f"\nNew tensor: {x_unsqueezed}")
+print(f"New shape: {x_unsqueezed.shape}")
+
+# Create tensor with specific shape
+x_original = torch.rand(size = (224, 224, 3))
+
+# Permute the original tensor to rearrange the axis order
+x_permuted  = x_original.permute(2, 0, 1)  # shifts axis 0->1, 1->2, 2->0
+
+print(f"Previous shape (not permuted): {x_original.shape}")
+print(f"New shape (permuted): {x_permuted.shape}")
+
+########## --- indexing (selecting data from tensors) --- #########
+
+x_idx = torch.arange(1, 10).reshape(1, 3, 3)  # takes tensor (vector) and reshapes to a matrix
+print(x_idx, x_idx.shape)
+
+#index bracket by bracket -??
+print(f"\nFirst square bracket: \n{x_idx[0]}")
+print(f"Second square bracket:{x_idx[0][0]}")
+print(f"Third square bracket: {x_idx[0][0][0]}")
+
+
+########## --- PyTorch tensors & NumPy --- #########
+import numpy as np
+
+array = np.arange(1.0, 8.0)
+tensor = torch.from_numpy(array) #Numpy array -> Pytorch tensor
+print(f"\nConvert from numpy array to tensor: \n{array, tensor}")
+
+# Tensor to NumPy array
+tensor = torch.ones(7)  # create a tensor of ones with dtype=float32
+numpy_tensor = tensor.numpy()
+print(f"\nConvert from tensor to numpy array: \n{tensor, numpy_tensor}")
+
+
+
+
+
 
 

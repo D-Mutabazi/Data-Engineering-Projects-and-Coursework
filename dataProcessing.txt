@@ -1,0 +1,3 @@
+#Remove weekends:
+- financial maket trade midweek only, thus chart is distorted if weekends included
+- from orginal dataset remove spread column - does not provide value

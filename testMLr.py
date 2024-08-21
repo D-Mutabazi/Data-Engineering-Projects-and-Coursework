@@ -14,7 +14,7 @@ def load_data(file_path):
 
     # Assuming columns 'feature1', 'feature2', ..., 'featureN', and 'target'
     time = data['Time']
-    X = data[['Open','High', 'Low','Volume']]  #features
+    X = data[['Open','High', 'Low']]  #features
     Y = data['Close']                #target
 
     return X, Y, time
@@ -56,10 +56,14 @@ def main():
     # Split data into training and test sets
     X_train, X_test, y_train, y_test, time_train, time_test = train_test_split(X, y, time,  test_size=0.2, random_state=42, shuffle=False)
 
+    print(X_train.head())
+
+
    # Standardize features - unless volume added, not needed
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
+
 
     # Initialize and train the model
     model = LinearRegression(learning_rate=0.01, n_iterations=1000)

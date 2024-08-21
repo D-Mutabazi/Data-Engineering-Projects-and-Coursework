@@ -16,6 +16,8 @@ df = pd.read_csv('./Data/EURUSD_H1.csv') #check for if file is comma/tab/space .
 
 print(df.head())
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')  #if time included in date
+df = df[df['Time'].dt.dayofweek < 5]  # 0-4 corresponds to Monday-Friday
+
 # df['Time'] = pd.to_datetime(df['Time']) # if time not included
 print(df.head())
 

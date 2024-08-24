@@ -65,3 +65,63 @@ plt.title("True and Predicted Test Set Results")
 plt.legend()
 
 plt.show()
+
+
+
+# Trade simulation ideas #
+
+'''
+Dataframe to keep track of trades
+'''
+#  # Initialize lists to store trade data
+# trades = []
+
+# # Generate signals and simulate trades
+# for i in range(len(y_pred_test) - 1):  # Adjust the loop to stop before the last index
+#     entry_time = time_test.values[i]
+#     entry_price = y_test.values[i]
+
+#     if y_pred_test[i] > X_test[i][0]:  # Predicted close > open (long position signal)
+#         stop_loss = entry_price - 0.0010  # Assuming 10 pips for long
+#         take_profit = entry_price + 0.0030  # Assuming 30 pips for long
+
+#         # Simulate trade
+#         if y_test.values[i + 1] <= stop_loss:
+#             pips = (stop_loss - entry_price) * 10000  # Stopped out
+#         elif y_test.values[i + 1] >= take_profit:
+#             pips = (take_profit - entry_price) * 10000  # Take profit hit
+#         else:
+#             pips = (y_test.values[i + 1] - entry_price) * 10000  # Closed at next candle
+
+#         trades.append([entry_time, entry_price, stop_loss, take_profit, pips])
+
+#     elif y_pred_test[i] < X_test[i][0]:  # Predicted close < open (short position signal)
+#         stop_loss = entry_price + 0.0010  # Adjust for short position
+#         take_profit = entry_price - 0.0030  # Adjust for short position
+
+#         # Simulate trade for short
+#         if y_test.values[i + 1] >= stop_loss:
+#             pips = (entry_price - stop_loss) * 10000  # Stopped out
+#         elif y_test.values[i + 1] <= take_profit:
+#             pips = (entry_price - take_profit) * 10000  # Take profit hit
+#         else:
+#             pips = (entry_price - y_test.values[i + 1]) * 10000  # Closed at next candle
+
+#         trades.append([entry_time, entry_price, stop_loss, take_profit, pips])
+
+#         '''
+#         cant I make this continue to the next iteration if the until eiher the stop loss of the take profit is hit? 
+#         That would be a proper simulation of a trade
+#         '''
+
+# # Create DataFrame from trades
+# trades_df = pd.DataFrame(trades, columns=['Entry Time', 'Entry Price', 'Stop Loss', 'Take Profit', 'Pips Gained/Lost'])
+
+# # Export DataFrame to a CSV file
+# trades_df.to_csv('trades_results.csv', index=False)  # 'index=False' avoids writing row numbers
+
+# print(trades_df.head())
+
+'''
+Section End
+'''

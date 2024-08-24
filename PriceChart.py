@@ -1,3 +1,7 @@
+'''
+    Library will plot  datat candleStick chart
+'''
+
 import plotly.graph_objects as go   #plot candle stick data - plotly library
 import pandas as pd                 #pandas are used to analyze data
 

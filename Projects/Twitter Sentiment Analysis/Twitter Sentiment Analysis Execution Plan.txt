@@ -1,0 +1,95 @@
+Structured 2 week plan to complete USD Sentiment analysis project:
+
+##Week 1: Setup and Initial Development
+
+*Day 1: Project Setup and Planning
+Goal: Understand the project scope and set up the development environment.
+Tasks:
+ - Review the project objectives and outcomes.
+ - Install Python and necessary libraries (requests, tweepy, pandas).
+ - Sign up for Twitter Developer access and obtain API keys.                          (X)
+ 
+*Day 2: Explore Twitter API and Data Collection
+Goal: Learn to use the Twitter API to fetch tweets.
+Tasks:
+- Experiment with the Twitter API to fetch tweets containing keywords 
+  like "USD," "US Dollar," "DXY."
+- Learn how to filter tweets by language, hashtags, and keywords.
+
+*Day 3: Setting up Apache Kafka
+Goal: Install and configure Apache Kafka for real-time data streaming.
+Tasks:
+ - Install Kafka and create a basic setup with producers and consumers.
+ - Test streaming tweets into a Kafka topic.
+ 
+*Day 4: Data Processing with Apache Spark
+Goal: Set up Apache Spark and start processing streamed data.
+Tasks:
+ - Install Apache Spark and integrate it with Kafka.
+ - Write a simple Spark streaming job to consume and print tweets from Kafka.
+ 
+*Day 5: Basic Sentiment Analysis
+Goal: Implement sentiment analysis on the tweets.
+Tasks:
+ - Research and decide on a sentiment analysis library or API.
+ - Implement a basic sentiment analysis script that processes tweets to classify sentiments.
+ 
+*Day 6: Advanced Data Processing
+Goal: Refine data processing and sentiment analysis.
+Tasks:
+ - Enhance the Spark job to include sentiment analysis and handle exceptions.
+ - Start aggregating sentiment data (e.g., daily bullish vs. bearish counts).
+ 
+* Day 7: Initial Data Visualization Setup
+Goal: Set up basic visualization tools.
+Tasks:
+ - Install and configure Elasticsearch and Kibana.
+ - Stream processed data (sentiment scores) into Elasticsearch.
+
+##Week 2: Refinement and Deployment
+*Day 8: Improving Data Visualizations
+Goal: Create visualizations for the sentiment data.
+Tasks:
+ - Create Kibana dashboards to visualize sentiment trends over time.
+ - Test different types of visualizations (graphs, charts).
+
+*Day 9: Dashboard Customization
+Goal: Customize dashboards to add more interactivity and insights.
+Tasks:
+ - Add filters for date ranges, sentiment thresholds.
+ - Ensure dashboards are updating in real-time.
+
+*Day 10: Correlation Analysis (Optional)
+Goal: Begin exploring correlation with actual market data.
+Tasks:
+ - Fetch historical USD price data.
+ - Start a basic analysis to correlate tweet sentiments with price changes.
+
+*Day 11: Refining Correlation Analysis
+Goal: Refine analysis and visualization of correlations.
+Tasks:
+ - Enhance correlation algorithms.
+ - Update Kibana dashboards to include correlation data.
+ 
+*Day 12: System Testing and Validation
+Goal: Test the entire system thoroughly.
+Tasks:
+ - Conduct end-to-end testing to ensure all components work seamlessly.
+ - Debug any issues that arise.
+
+*Day 13: Documentation
+Goal: Document the system and usage instructions.
+Tasks:
+ - Document the setup process, usage, and maintenance instructions.
+ - Write up troubleshooting tips and FAQs.
+
+*Day 14: Review and Deployment
+Goal: Final review and prepare for deployment.
+Tasks:
+ - Review all components for optimization opportunities.
+ - Prepare for deployment (could be optional based on your goals).
+
+Additional Tips:
+Stay Flexible: Adjust the schedule based on progress and learning speed.
+Use Resources: Utilize tutorials, documentation, and community forums extensively.
+Version Control: Use Git for version control to manage changes and track progress.

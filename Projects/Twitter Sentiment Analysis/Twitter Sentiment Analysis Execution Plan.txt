@@ -5,7 +5,7 @@ Structured 2 week plan to complete USD Sentiment analysis project:
 *Day 1: Project Setup and Planning
 Goal: Understand the project scope and set up the development environment.
 Tasks:
- - Review the project objectives and outcomes.
+ - Review the project objectives and outcomes.                                        (X)
  - Install Python and necessary libraries (requests, tweepy, pandas).
  - Sign up for Twitter Developer access and obtain API keys.                          (X)
  
@@ -93,3 +93,15 @@ Additional Tips:
 Stay Flexible: Adjust the schedule based on progress and learning speed.
 Use Resources: Utilize tutorials, documentation, and community forums extensively.
 Version Control: Use Git for version control to manage changes and track progress.
+
+
+#######################################################
+API KEY: oHTb4tMGghQdlEMIxBcgEsRyM
+
+API SECRET KEY: b1LDZjQcV55nUjIGsdVMWbTVFDs1C2K754q09mPxY3T0AOhNh2
+
+Bearer token:AAAAAAAAAAAAAAAAAAAAAJtfvgEAAAAAskioLmYm2sz9ogkcWh1vVt0BHc4%3DPypBuYf20PUt5pTHWHgWrHudjNw2FofrAnNM7C4RmK6pjodK2o
+
+Access Token and Secret: 
+- Access Token: 1799715169049661441-GVONJzKXN7sj8DZiE7NSVNNqfr3Ccb
+- Access Token Secret: HvWYhGfha2qd1NyXkf0s63uesELBwLaIlKeU7kOfu9yjb

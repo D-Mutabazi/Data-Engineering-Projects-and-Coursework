@@ -1,3 +1,25 @@
 #Remove weekends:
 - financial maket trade midweek only, thus chart is distorted if weekends included
 - from orginal dataset remove spread column - does not provide value
+
+
+Feature selection:
+- Trend indicators
+    Moving average (SMA/ EMA) (x)
+    MACD (x)
+    Average directional index (ADX)
+
+- Momentum indicators
+    RSI -> 14 day period
+    Stochastic Oscilator
+    Williams %Returns
+
+- Volatility indicators
+    Bollinger Bands
+    Average True range
+
+- Historic Price Data
+    OHLCV
+    Price Changes
+    Time Series data
+

@@ -2,3 +2,4 @@ plotly==5.23.0
 seaborn
 pytorch
 ta-lib
+statsmodel

@@ -7,19 +7,19 @@ Feature selection:
 - Trend indicators
     Moving average (SMA/ EMA) (x)
     MACD (x)
-    Average directional index (ADX)
+    Average directional index (ADX) (x)
 
-- Momentum indicators
-    RSI -> 14 day period
-    Stochastic Oscilator
-    Williams %Returns
+- Momentum indicators: 
+    RSI -> 14 day period (x)
+    Stochastic Oscilator (x)
+    Williams %Returns (x)
 
 - Volatility indicators
-    Bollinger Bands
-    Average True range
+    Bollinger Bands (x)
+    Average True range(x)
 
 - Historic Price Data
-    OHLCV
+    OHLCV (x)
     Price Changes
-    Time Series data
+    Time Series data (x)
 

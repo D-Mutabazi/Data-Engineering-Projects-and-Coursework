@@ -1,3 +1,5 @@
 streaming_pipeline/
 Projects/Twitter\ Sentiment\ Analysis/sentAnalysis/
 *.log
+*.csv
+

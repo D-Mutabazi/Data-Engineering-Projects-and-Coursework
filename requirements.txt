@@ -3,3 +3,5 @@ seaborn
 pytorch
 ta-lib
 statsmodel
+bokeh==2.4.3
+backtesting.py
